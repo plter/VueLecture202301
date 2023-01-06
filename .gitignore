@@ -1,2 +1,6 @@
 bin-debug
 .settings
+node_modules
+.vscode
+.DS_Store
+.idea
