@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <div id="app">
+        {{ content }}
+    </div>
+    <script src="/lib/vue3.global.prod.js"></script>
+    <script src="/commons/index.js"></script>
+    <script>
+        document.querySelector("#app").innerHTML = "";
+        simpleSsr.createApp().mount("#app");
+    </script>
+{% endblock %}

@@ -2,7 +2,7 @@
   <div>
     FirstView:
     <div>
-      <button @click="count++">Click count {{ count}}</button>
+      <button title="Clickme" @click="count++">Click count {{ count}}</button>
     </div>
   </div>
 </template>
@@ -11,7 +11,7 @@
 
 import {ref} from "vue";
 
-let count = ref(0)
+let count = ref(0);
 
 </script>
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue3.global.prod.js"></script>
+</head>
+<body>
+<div id="app">
+    <first-view></first-view>
+    <second-view></second-view>
+</div>
+<script>
+    (async function () {
+        let app = Vue.createApp({});
+        app.component("FirstView", {
+            template: `<div>First View</div>`
+        });
+        app.component("SecondView", {
+            template: await (await fetch("SecondView.html")).text()
+        });
+        app.mount("#app");
+    })();
+</script>
+</body>
+</html>
