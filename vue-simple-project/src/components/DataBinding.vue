@@ -1,5 +1,7 @@
 <template>
   Data binding:
+
+  <div>{{value}}</div>
   <div>
     <input v-model="value">
   </div>

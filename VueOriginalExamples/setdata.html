@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="output"></div>
+<button id="btn">Click count</button>
+
+<script>
+
+    (function () {
+
+        let count = 0;
+
+        let output = document.querySelector("#output");
+
+        document.querySelector("#btn").onclick = function () {
+            count++;
+
+            output.innerHTML = "Click count " + count;
+        }
+
+    })();
+
+</script>
+</body>
+</html>
